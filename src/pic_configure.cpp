@@ -1,5 +1,8 @@
 #include "xentrinobot_pid/include/pid_core.h"
 
+control_msgs::PidStateConfig pid_msg;
+ros::Publisher pub_message("pid", &pid_msg);
+
 int main(int argc, char **argv)
 {
 
@@ -21,10 +24,12 @@ int main(int argc, char **argv)
   pnh.param("d", d, 0.3);
   pnh.param("i", i, 0.5);
   pnh.param("rate", rate, 1);
+  pnh.advertise(pub_message);
 
   //ros::Publisher pub_message = nh.advertise<lino_msgs::PID>("pid", 10);
 
-  ros::Publisher pub_message = nh.advertise<control_msgs::PidState>("pid", 10)
+  
+ // ros::Publisher pub_message = nh.advertise<control_msgs::PidState>("pid", 10)
   
   ros::Rate r(rate);
 
@@ -51,5 +56,5 @@ void publishMessage( control_msgs::PidState msg;)
   msg.p_term = p_;
   msg.d_term = d_;
   msg.i_term = i_;
-  publish(msg);
+  pub_message.publish(msg);
 }
