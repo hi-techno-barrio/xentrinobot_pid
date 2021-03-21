@@ -1,16 +1,9 @@
 #include "lino_pid/lino_pid_core.h"
 
-LinoPID::LinoPID()
-{
-}
-
-LinoPID::~LinoPID()
-{
-}
 
 
 
-void LinoPID::messageCallback(const std_msgs::Float32MultiArray::ConstPtr& &msg)
+void messageCallback(const std_msgs::Float32MultiArray::ConstPtr& &msg)
 {
   p_ = msg->p;
   d_ = msg->d;
@@ -22,7 +15,7 @@ void LinoPID::messageCallback(const std_msgs::Float32MultiArray::ConstPtr& &msg)
   ROS_INFO("I: %f", i_);
 }
 
-void LinoPID::configCallback(lino_pid::linoPIDConfig &config, double level)
+void configCallback(lino_pid::linoPIDConfig &config, double level)
 {
   //for PID GUI
   p_ = config.p;
