@@ -6,8 +6,6 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "pid_configure");
   ros::NodeHandle nh;
 
-  //LinoPID *lino_pid = new LinoPID();
-
   dynamic_reconfigure::Server<xentrinobot_pid::PidStateConfig> dr_srv;
   dynamic_reconfigure::Server<xentrinobot_pid::PidStateConfig>::CallbackType cb;
   cb = boost::bind(&configCallback, _1, _2);
