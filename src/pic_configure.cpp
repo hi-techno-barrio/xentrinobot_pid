@@ -45,11 +45,11 @@ void configCallback(xentrinobot_pid::PidStateConfig &config, double level)
   i_ = config.i;
 
 }
-void publishMessage(ros::Publisher *pub_message)
+void publishMessage( control_msgs::PidState msg;)
 {
-  control_msgs::PidState msg;
+ 
   msg.p = p_;
   msg.d = d_;
   msg.i = i_;
-  pub_message->publish(msg);
+  publish(msg);
 }
