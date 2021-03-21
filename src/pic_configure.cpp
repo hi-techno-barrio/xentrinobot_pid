@@ -27,8 +27,6 @@ int main(int argc, char **argv)
   pnh.advertise(pub_message);
 
   //ros::Publisher pub_message = nh.advertise<lino_msgs::PID>("pid", 10);
-
-  
  // ros::Publisher pub_message = nh.advertise<control_msgs::PidState>("pid", 10)
   
   ros::Rate r(rate);
