@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 
   while (nh.ok())
   {
-    publishMessage(&pub_message);
+    publishMessage();
     ros::spinOnce();
     r.sleep();
   }
@@ -50,7 +50,7 @@ void configCallback(xentrinobot_pid::PidStateConfig &config, double level)
   i_ = config.i_term;
 
 }
-void publishMessage( control_msgs::PidState msg;)
+void publishMessage()
 {
  
   msg.p_term = p_;
