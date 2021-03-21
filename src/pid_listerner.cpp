@@ -1,4 +1,4 @@
-#include "xentrinobot_pid/pid_core.h"
+#include "xentrinobot_pid/include/pid_core.h"
 
 
 void messageCallback(const control_msgs::PidState& msg);
