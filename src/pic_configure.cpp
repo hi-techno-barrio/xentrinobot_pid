@@ -1,4 +1,4 @@
-#include "xentrinobot_pid/pid_core.h"
+#include "xentrinobot_pid/include/pid_core.h"
 
 int main(int argc, char **argv)
 {
@@ -40,16 +40,16 @@ int main(int argc, char **argv)
 void configCallback(xentrinobot_pid::PidStateConfig &config, double level)
 {
   //for PID GUI
-  p_ = config.p;
-  d_ = config.d;
-  i_ = config.i;
+  p_ = config.p_term;
+  d_ = config.d_term;
+  i_ = config.i_term;
 
 }
 void publishMessage( control_msgs::PidState msg;)
 {
  
-  msg.p = p_;
-  msg.d = d_;
-  msg.i = i_;
+  msg.p_term = p_;
+  msg.d_term = d_;
+  msg.i_term = i_;
   publish(msg);
 }
