@@ -31,9 +31,9 @@ int main(int argc, char **argv)
 
 void messageCallback(const control_msgs::PidState& msg)
 {
-  p_ = msg->p;
-  d_ = msg->d;
-  i_ = msg->i;
+  p_ = msg.p_term;
+  d_ = msg.d_term;
+  i_ = msg.i_term;
 
   //echo P,I,D
   ROS_INFO("P: %f", p_);
