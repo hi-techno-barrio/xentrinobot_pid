@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(lino_pid)
+project(xentrinobot_pid)
 
 find_package(catkin REQUIRED COMPONENTS dynamic_reconfigure message_generation roscpp std_msgs )
 
@@ -13,7 +13,7 @@ generate_messages(
 )
 
 generate_dynamic_reconfigure_options(
-    cfg/linoPID.cfg
+    cfg/xentrinobotPID.cfg
 )
 
 catkin_package(
@@ -28,9 +28,9 @@ set (BINNAME1 pid_configure)
 set (BINNAME2 pid_listen)
 
 # Set the source files to use with the executable.
-set (SRCS1 ${SRCS1} src/lino_pid_core.cpp)
+set (SRCS1 ${SRCS1} src/pid_core.cpp)
 set (SRCS1 ${SRCS1} src/pid_configure.cpp)
-set (SRCS2 ${SRCS2} src/lino_pid_core.cpp)
+set (SRCS2 ${SRCS2} src/pid_core.cpp)
 set (SRCS2 ${SRCS2} src/pid_listen.cpp)
 
 # Build the executable that will be used to run this node.
