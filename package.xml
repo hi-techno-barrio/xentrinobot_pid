@@ -1,11 +1,11 @@
 <package format="2">
-    <name>lino_pid</name>
+    <name>xentrinobot_pid</name>
     <version>0.0.1</version>
-    <description>lino_robot PID dynamic_reconfigure</description>
-    <author>Juan Jimeno</author>
-    <maintainer email="jimenojmm@gmail.com">Juan Jimeno</maintainer>
+    <description>Xentrinobot PID dynamic_reconfigure</description>
+    <author>Christopher Coballes</author>
+    <maintainer email="cobecoballes@gmail.com">Christopher Coballes</maintainer>
     <license>BSD</license>
-    <url>https://github.com/grassjelly/lino_pid</url>
+    <url>https://github.com/hi-techno-barrio/xentrinobot_pid</url>
 
     <buildtool_depend>catkin</buildtool_depend>
     <build_depend>message_generation</build_depend>
