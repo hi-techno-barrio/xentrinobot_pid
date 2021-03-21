@@ -15,7 +15,7 @@ int main(int argc, char **argv)
   pnh.param("rate", rate, int(40));
 
 
-  ros::Subscriber sub_message = nh.subscribe("pid", 1000,messageCallback, lino_pid);
+  ros::Subscriber sub_message = nh.subscribe("pid", 1000,messageCallback);
 
   ros::Rate r(rate);
 
