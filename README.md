@@ -1,4 +1,4 @@
-lino_pid
+Xentrinobot
 ============
 
-ROS Package for PID dynamic-reconfiguration for lino_robot
+ROS Package for PID dynamic-reconfiguration for  Xentrinobot
