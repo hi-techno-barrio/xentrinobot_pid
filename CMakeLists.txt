@@ -13,7 +13,7 @@ generate_messages(
 )
 
 generate_dynamic_reconfigure_options(
-    cfg/xentrinobotPID.cfg
+    cfg/xentrinobot_pid.cfg
 )
 
 catkin_package(
