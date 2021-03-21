@@ -16,9 +16,9 @@
 class xentrinobotPID
 {
 public:
-  void configCallback(xentrinobot_pid::PidStateConfig &config, double level);
-  void publishMessage(ros::Publisher *pub_message);
-  void messageCallback(const control_msgs::PidState& msg);
+  //void configCallback(xentrinobot_pid::PidStateConfig &config, double level);
+  //void publishMessage(ros::Publisher *pub_message);
+  //void messageCallback(const control_msgs::PidState& msg);
 
   double p_;
   double d_;
