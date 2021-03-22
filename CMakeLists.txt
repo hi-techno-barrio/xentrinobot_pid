@@ -28,9 +28,9 @@ set (BINNAME1 pid_configure)
 set (BINNAME2 pid_listen)
 
 # Set the source files to use with the executable.
-set (SRCS1 ${SRCS1} src/pid_core.cpp)
+set (SRCS1 ${SRCS1} include/pid_core.cpp)
 set (SRCS1 ${SRCS1} src/pid_configure.cpp)
-set (SRCS2 ${SRCS2} src/pid_core.cpp)
+set (SRCS2 ${SRCS2} include/pid_core.cpp)
 set (SRCS2 ${SRCS2} src/pid_listen.cpp)
 
 # Build the executable that will be used to run this node.
