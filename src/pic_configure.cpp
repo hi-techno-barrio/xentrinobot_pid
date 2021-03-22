@@ -51,8 +51,8 @@ void configCallback(xentrinobot_pid::PidStateConfig &config, double level)
 void publishMessage()
 {
  
-  pid_msg.p_term = p_;
-  pid_msg.d_term = d_;
-  pid_msg.i_term = i_;
+  pid_msg.p_term = xentrinobotPID.p_;
+  pid_msg.d_term = xentrinobotPID.d_;
+  pid_msg.i_term = xentrinobotPID.i_;
   pub_message.publish(pid_msg);
 }
