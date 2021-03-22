@@ -31,14 +31,14 @@ int main(int argc, char **argv)
 
 void messageCallback(const control_msgs::PidState& msg)
 {
-  p_ = msg.p_term;
-  d_ = msg.d_term;
-  i_ = msg.i_term;
+  xentrinobotPID.p_ = msg.p_term;
+  xentrinobotPID.d_ = msg.d_term;
+  xentrinobotPID.i_ = msg.i_term;
 
   //echo P,I,D
-  ROS_INFO("P: %f", p_);
-  ROS_INFO("D: %f", d_);
-  ROS_INFO("I: %f", i_);
+  ROS_INFO("P: %f", xentrinobotPID.p_);
+  ROS_INFO("D: %f", xentrinobotPID.d_);
+  ROS_INFO("I: %f", xentrinobotPID.i_);
 }
 
 
