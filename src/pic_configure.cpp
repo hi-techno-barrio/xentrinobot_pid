@@ -43,9 +43,9 @@ int main(int argc, char **argv)
 void configCallback(xentrinobot_pid::PidStateConfig &config, double level)
 {
   //for PID GUI
-  p_ = config.p_term;
-  d_ = config.d_term;
-  i_ = config.i_term;
+  xentrinobotPID.p_ = config.p_term;
+  xentrinobotPID.d_ = config.d_term;
+  xentrinobotPID.i_ = config.i_term;
 
 }
 void publishMessage()
